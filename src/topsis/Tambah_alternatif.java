@@ -34,10 +34,6 @@ public class Tambah_alternatif extends javax.swing.JDialog {
 
         jLabel1 = new javax.swing.JLabel();
         txtname = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        txtprod = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        txtins = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         labeljudul = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
@@ -56,29 +52,11 @@ public class Tambah_alternatif extends javax.swing.JDialog {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel2.setText("PRODI");
-
-        txtprod.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtprodActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel3.setText("INSTITUSI");
-
-        txtins.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtinsActionPerformed(evt);
-            }
-        });
-
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setText("GENDER");
+        jLabel4.setText("JENIS");
 
         labeljudul.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        labeljudul.setText("TAMBAH MAHASISWA");
+        labeljudul.setText("TAMBAH MENU MAKANAN");
 
         btn_batal.setText("BATAL");
         btn_batal.addActionListener(new java.awt.event.ActionListener() {
@@ -94,7 +72,7 @@ public class Tambah_alternatif extends javax.swing.JDialog {
             }
         });
 
-        gender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "LAKI-LAKI", "PEREMPUAN" }));
+        gender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Appetizer ", "Main Course ", "Dessert" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -106,19 +84,15 @@ public class Tambah_alternatif extends javax.swing.JDialog {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2))
-                        .addGap(18, 18, 18)
+                            .addComponent(jLabel1))
+                        .addGap(30, 30, 30)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtname, javax.swing.GroupLayout.DEFAULT_SIZE, 382, Short.MAX_VALUE)
-                            .addComponent(txtprod, javax.swing.GroupLayout.DEFAULT_SIZE, 382, Short.MAX_VALUE)
-                            .addComponent(txtins, javax.swing.GroupLayout.DEFAULT_SIZE, 382, Short.MAX_VALUE)
                             .addComponent(gender, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(163, 163, 163)
                         .addComponent(labeljudul)))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
             .addComponent(jSeparator1)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -138,23 +112,15 @@ public class Tambah_alternatif extends javax.swing.JDialog {
                     .addComponent(txtname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(txtprod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(gender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(92, 92, 92)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_batal)
                     .addComponent(btn_simpan))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
@@ -165,21 +131,11 @@ public class Tambah_alternatif extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtnameActionPerformed
 
-    private void txtprodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtprodActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtprodActionPerformed
-
-    private void txtinsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtinsActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtinsActionPerformed
-
     private void btn_simpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_simpanActionPerformed
         // TODO add your handling code here:
         var cek = btn_simpan.getText();
 
         var nama = txtname.getText();
-        var prodi = txtprod.getText();
-        var institusi = txtins.getText();
         var gender = this.gender.getSelectedIndex();
         var jk = "L";
         if (gender == 0) {
@@ -192,14 +148,12 @@ public class Tambah_alternatif extends javax.swing.JDialog {
             Connection k = Koneksi.Go();
             Statement st = k.createStatement();
             if ("TAMBAH".equals(cek)) {
-                var query = "INSERT INTO alternatif (nama,prodi,institusi,jk) VALUES "
-                        + "('" + nama + "','" + prodi + "','" + institusi + "','" + jk + "')";
+                var query = "INSERT INTO alternatif (nama,jk) VALUES "
+                        + "('" + nama + "','" + jk + "')";
                 st.executeUpdate(query);
             } else {
                 var query = "UPDATE alternatif SET "
                         + "nama = '" + nama + "', "
-                        + "prodi = '" + prodi + "', "
-                        + "institusi = '" + institusi + "', "
                         + "jk = '" + jk + "' "
                         + "WHERE id = " + idToUpdate;
                 st.executeUpdate(query);
@@ -267,14 +221,10 @@ public class Tambah_alternatif extends javax.swing.JDialog {
     public static javax.swing.JButton btn_simpan;
     private static javax.swing.JComboBox<String> gender;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JSeparator jSeparator1;
     public static javax.swing.JLabel labeljudul;
-    private static javax.swing.JTextField txtins;
     private static javax.swing.JTextField txtname;
-    private static javax.swing.JTextField txtprod;
     // End of variables declaration//GEN-END:variables
 
     public static void edit(String nama) {
@@ -287,8 +237,6 @@ public class Tambah_alternatif extends javax.swing.JDialog {
                 if (r.next()) {
                     idToUpdate = r.getInt("id");
                     txtname.setText(r.getString("nama"));
-                    txtprod.setText(r.getString("prodi"));
-                    txtins.setText(r.getString("institusi"));
                     gender.setSelectedItem(r.getString("jk"));
                 }
                 btn_simpan.setText("SIMPAN");

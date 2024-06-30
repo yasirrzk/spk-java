@@ -97,16 +97,16 @@ public class MainApp extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel6.setText("PENERIMAAN MAHASISWA MAGANG");
+        jLabel6.setText("Rekomendasi Menu Makanan Kafe");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(154, Short.MAX_VALUE)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(150, 150, 150))
+                .addContainerGap(116, Short.MAX_VALUE)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 551, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(81, 81, 81))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -149,7 +149,7 @@ public class MainApp extends javax.swing.JFrame {
         });
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel5.setText("DATA MAHASISWA");
+        jLabel5.setText("DATA Makanan");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -347,7 +347,7 @@ public class MainApp extends javax.swing.JFrame {
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addContainerGap(11, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -739,7 +739,7 @@ public class MainApp extends javax.swing.JFrame {
     public static void loadAlternatif() {
         int no = 1;
         try {
-            Object[] kolom = {"NO", "NAMA", "PRODI", "INSTITUSI", "GENDER"};
+            Object[] kolom = {"NO", "NAMA", "JENIS"};
             Object[][] data = null;
             DefaultTableModel model = new DefaultTableModel(data, kolom);
             alternatif.setModel(model);
@@ -751,18 +751,20 @@ public class MainApp extends javax.swing.JFrame {
             while (r_alt.next()) {
                 var id = r_alt.getInt("id");
                 var name = r_alt.getString("nama");
-                var prodi = r_alt.getString("prodi");
-                var institusi = r_alt.getString("institusi");
+//                var prodi = r_alt.getString("prodi");
+//                var institusi = r_alt.getString("institusi");
                 var jk = r_alt.getString("jk");
 
                 // Transform jk value
                 if ("L".equals(jk)) {
-                    jk = "LAKI-LAKI";
+                    jk = "APPETIZER";
                 } else if ("P".equals(jk)) {
-                    jk = "PEREMPUAN";
+                    jk = "MAIN COURSE";
+                } else {       
+                    jk = "DESSERT";
                 }
 
-                Object[] d = {no++, name, prodi, institusi, jk};
+                Object[] d = {no++, name,jk};
                 model.addRow(d);
             }
         } catch (SQLException e) {
@@ -795,7 +797,7 @@ public class MainApp extends javax.swing.JFrame {
 
     public static void loadNilai() {
         try {
-            Object[] kolom = {"NAMA", "IPK", "TES PENGETAHUAN UMUM", "TES BAHASA INGGRIS", "SERTIFIKAT", "LOMBA"};
+            Object[] kolom = {"NAMA", "RASA", "HARGA", "BAHAN MAKANAN", "GIZI", "PENAMPILAN"};
             Object[][] data = null;
             DefaultTableModel model = new DefaultTableModel(data, kolom);
             nilai.setModel(model);
@@ -1025,7 +1027,7 @@ public class MainApp extends javax.swing.JFrame {
     private static void CalcIdealValue() {
         truncate("ideal");
         try {
-            Object[] kolom = {"NAMA", "IPK", "TES PENGETAHUAN UMUM", "TES BAHASA INGGRIS", "SERTIFIKAT", "LOMBA"};
+            Object[] kolom = {"NAMA", "RASA", "HARGA", "BAHAN MAKANAN", "GIZI", "PENAMPILAN"};
             DefaultTableModel model = new DefaultTableModel(null, kolom);
             ideal.setModel(model);
             //A+
@@ -1069,7 +1071,7 @@ public class MainApp extends javax.swing.JFrame {
         truncate("alt_norm");
         truncate("alt_norm_terbobot");
         try {
-            Object[] kolom = {"NAMA", "IPK", "TES PENGETAHUAN UMUM", "TES BAHASA INGGRIS", "SERTIFIKAT", "LOMBA"};
+            Object[] kolom = {"NAMA", "RASA", "HARGA", "BAHAN MAKANAN", "GIZI", "PENAMPILAN"};
             DefaultTableModel model = new DefaultTableModel(null, kolom);
             normal.setModel(model);
             DefaultTableModel model2 = new DefaultTableModel(null, kolom);

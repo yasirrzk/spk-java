@@ -82,9 +82,9 @@ public class TambahNilai extends javax.swing.JDialog {
         });
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setText("IPK");
+        jLabel4.setText("Rasa");
 
-        c1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<= 3,0", "3,01 - 3,40", "3,41 - 3,60", "3,61 - 3,80", "3,81 - 4,0" }));
+        c1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 - Sangat tidak enak", "2 - Kurang Enak", "3 - SNI", "4 -  Lezat", "5 - Bedebest" }));
         c1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 c1ActionPerformed(evt);
@@ -92,7 +92,7 @@ public class TambahNilai extends javax.swing.JDialog {
         });
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel6.setText("TES PENGETAHUAN UMUM");
+        jLabel6.setText("Harga");
 
         c2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 - Sangat Buruk", "2 -  Buruk", "3 - Cukup", "4 - Baik", "5 - Sangat Baik" }));
         c2.addActionListener(new java.awt.event.ActionListener() {
@@ -101,20 +101,25 @@ public class TambahNilai extends javax.swing.JDialog {
             }
         });
 
-        c3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 - Sangat Buruk", "2 -  Buruk", "3 - Cukup", "4 - Baik", "5 - Sangat Baik" }));
+        c3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 - Sangat Buruk", "2 -  Kurang Bagus", "3 - Standard", "4 - Premium", "5 - Sangat premium" }));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel7.setText("TES B. INGGRIS");
+        jLabel7.setText("Bahan Makanan");
 
-        c4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<= 3 Sertifikat", "4 - 6 Sertifikat", "7 - 8 Sertifikat", "9 - 10 Sertifikat", "10+ Sertifikat" }));
+        c4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 Sangat buruk", "2 Buruk", "3 Seimbang", "4 Bergizi", "5 Sangat Bergizi" }));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel8.setText("SERTIFIKASI");
+        jLabel8.setText("Gizi");
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel9.setText("LOMBA");
+        jLabel9.setText("Penampilan");
 
-        c5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0 tidak pernah", "1 Submit", "2 Finalis", "3 Juara 3", "4 Juara 2", "5 Juara 1" }));
+        c5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0 Sangat Buruk\t", "1 Buruk", "2 Oke", "3 Menarik", "4 Sangat Menarik", "5 Istimewa" }));
+        c5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -129,7 +134,7 @@ public class TambahNilai extends javax.swing.JDialog {
                     .addComponent(jLabel4)
                     .addComponent(jLabel1)
                     .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(c3, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(c4, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -257,6 +262,10 @@ public class TambahNilai extends javax.swing.JDialog {
     private void alternatifActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alternatifActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_alternatifActionPerformed
+
+    private void c5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_c5ActionPerformed
 
     /**
      * @param args the command line arguments
