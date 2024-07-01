@@ -11,7 +11,7 @@ import java.sql.Statement;
 
 /**
  *
- * @author hanif
+ * @author yaseru
  */
 public class Tambah_alternatif extends javax.swing.JDialog {
 

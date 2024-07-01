@@ -14,7 +14,7 @@ import static topsis.Tambah_alternatif.btn_simpan;
 
 /**
  *
- * @author hanif
+ * @author yaseru
  */
 public class TambahNilai extends javax.swing.JDialog {
 

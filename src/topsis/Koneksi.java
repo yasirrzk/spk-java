@@ -10,7 +10,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author hanif
+ * @author yaseru
  */
 public class Koneksi {
     public static Connection Go() {

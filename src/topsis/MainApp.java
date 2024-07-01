@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author hanif
+ * @author yaseru
  */
 public class MainApp extends javax.swing.JFrame {
 
@@ -1138,6 +1138,12 @@ public class MainApp extends javax.swing.JFrame {
                 s3.executeUpdate(q4);
                 s3.close();
                 k3.close();
+                
+//                Mengurutkan hasil
+//                Connection k4 = Koneksi.Go();
+//                Statement s4 = k4.createStatement();
+//                var q7 = "SELECT * FROM alt_norm_terbobot ORDER BY dplus DESC, dminus DESC, v DESC";
+//                ResultSet r4 = s4.executeQuery(q7);
             }
             r.close();
             s.close();
